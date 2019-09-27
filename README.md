@@ -8,6 +8,8 @@ See https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html#with-s3-ex
 
 ## Build Locally
 
+
+### Package Dependencies
 *not required* unless adding uncommon dependencies
 ```
 virtualenv ~/lambda_venv
@@ -18,6 +20,9 @@ cd $VIRTUAL_ENV/lib/python3.7/site-packages
 zip -r /tmp/InspectAuditBatch.zip .
 cd -
 ```
+
+
+### Package function as zip
 
 ```
 
@@ -49,6 +54,3 @@ aws lambda update-function-code --function-name InspectAuditBatch \
 `aws lambda invoke --function-name InspectAuditBatch --invocation-type Event \
 --payload file://test/resources/s3event.json outputfile.txt`
 
-
-
-/usr/local/opt/python/libexec/bin:/Users/eddie/scripts:/Users/eddie/bin:/usr/local/sbin:/usr/local/bin:/usr/local/opt/jenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/eddie/go/bin:/usr/local/opt/go/libexec/bin
